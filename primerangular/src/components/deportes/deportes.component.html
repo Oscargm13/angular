@@ -1,0 +1,16 @@
+<div>
+	<h1>Directivas angular</h1>
+	<h2>Número de deportes {{ sports.length }}</h2>
+	<!-- DIRECTIVA IF -->
+	<div *ngIf="sports.length < 6">
+		<p style="color:red">
+			Tienes menos de 6 deportes
+		</p>
+	</div>
+	<p>El primer deporte es: {{ sports[0] }}</p>
+	<ul>
+		<li *ngFor="let deporte of sports; let i = index">
+			Index: {{ i }}, Deporte: {{deporte}}
+		</li>
+	</ul>
+</div>
