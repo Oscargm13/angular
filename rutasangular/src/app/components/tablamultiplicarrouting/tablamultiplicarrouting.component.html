@@ -1,0 +1,12 @@
+<div>
+  <h1>Tabla de multiplicar</h1>
+  <div *ngIf="numero">
+    <ul>
+      <li *ngFor="let num of arrNumeros; let i = index">{{numero}} x {{i + 1}} = {{num}}</li>
+    </ul>
+    <h2 style="color: blue;">Tabla de multiplicar del número: {{numero}}</h2>
+  </div>
+  <div *ngIf="!numero">
+    <h2 style="color: red;">No hemos recibido numero</h2>
+  </div>
+</div>
