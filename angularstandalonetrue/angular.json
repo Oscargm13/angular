@@ -3,19 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "serviciosangular": {
+    "angularstandalonetrue": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "standalone": false
-        },
-        "@schematics/angular:directive": {
-          "standalone": false
-        },
-        "@schematics/angular:pipe": {
-          "standalone": false
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -23,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/serviciosangular",
+            "outputPath": "dist/angularstandalonetrue",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -60,13 +50,7 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.development.ts"
-                }
-              ]
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -75,10 +59,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "serviciosangular:build:production"
+              "buildTarget": "angularstandalonetrue:build:production"
             },
             "development": {
-              "buildTarget": "serviciosangular:build:development"
+              "buildTarget": "angularstandalonetrue:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -108,8 +92,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": false
   }
 }
