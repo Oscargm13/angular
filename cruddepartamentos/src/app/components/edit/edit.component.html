@@ -1,0 +1,17 @@
+<div>
+  <h1>Edit</h1>
+  <p>
+    <a [routerLink]="['/']">Back Home</a>
+  </p>
+  <form #editForm="ngForm">
+    <input type="number" name="cajaid" #cajaid
+    value="{{departamento.idDepartamento}}">
+    <label for="">Nombre</label>
+    <input type="text" name="cajanombre" #cajanombre
+    value="{{departamento.nombre}}">
+    <label for="">Localidad</label>
+    <input type="text" name="cajalocalidad" #cajalocalidad
+    value="{{departamento.localidad}}">
+    <button class="btn btn-info" (click)="updateDepartamento()">Update</button>
+  </form>
+</div>
