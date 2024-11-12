@@ -1,1 +1,5 @@
-export const environment = {};
+
+export const environment = {
+  urlApiEmpleados: "https://apiempleadoscoreoauth.azurewebsites.net/",
+  token: "",  
+};

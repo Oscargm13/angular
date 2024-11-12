@@ -7,7 +7,10 @@ import { LoginComponent } from './components/login/login.component';
 import { PerfilempleadoComponent } from './components/perfilempleado/perfilempleado.component';
 import { SubordinadosempleadoComponent } from './components/subordinadosempleado/subordinadosempleado.component';
 import { HomeComponent } from './components/home/home.component';
-import { MenuComponent } from './menu/menu.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { provideHttpClient } from '@angular/common/http';
+import { FormsModule, NgForm } from '@angular/forms';
+import { NgFor } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -20,9 +23,12 @@ import { MenuComponent } from './menu/menu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    NgFor
+    
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

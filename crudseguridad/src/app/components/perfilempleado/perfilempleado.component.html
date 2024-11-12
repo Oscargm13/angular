@@ -1,1 +1,17 @@
-<p>perfilempleado works!</p>
+<div>
+  <h1>Perfil</h1>
+  <table>
+    <thead>
+      <th>nombre</th>
+      <th>oficio</th>
+    </thead>
+    <tbody>
+      @for(let emp of empleados; track emp){
+      <tr>
+        <td>{{emp.apellido}}</td>
+        <td>{{emp.oficio}}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
