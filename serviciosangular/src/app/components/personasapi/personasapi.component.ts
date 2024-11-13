@@ -15,12 +15,9 @@ export class PersonasapiComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._service.getPersonasPromesa().then(response => {
-      this.personas = response
-    })
-    // this._service.getPersonas().subscribe(response => {
-    //   console.log("leyendo");
-    //   this.personas = response;
-    // })    
+    this._service.getPersonas().subscribe(response => {
+      console.log("leyendo");
+      this.personas = response;
+    })    
   }
 }
